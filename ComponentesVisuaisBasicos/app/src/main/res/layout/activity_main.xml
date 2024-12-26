@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_marginTop="50dp"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--
+            a propriedade layout_weight deixa os
+            objetos responsivos por PESO, assim nao
+            precisa fixar o tamanho diretamente nele.
+        -->
+        <EditText
+            android:id="@+id/campoPesquisas"
+            android:hint="procurar por.."
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/botaoPesquisa"
+            android:text="PROCURAR"
+            android:visibility="visible"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content">
+        </Button>
+        
+        <ProgressBar
+            android:id="@+id/BarraProgresso"
+            android:visibility="visible"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/containerPesquisa"
+        android:visibility="gone"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <ImageButton
+                android:id="@+id/imagemResultado"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/tituloResultado"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="titulo do resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        
+            <TextView
+                android:id="@+id/descricaoResultado"
+                android:layout_marginTop="8dp"
+                android:text="conteudo da pesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

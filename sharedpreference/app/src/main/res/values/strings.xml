@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">sharedpreference</string>
+    <string name="tema_claro">Tema claro</string>
+    <string name="tema_escuro">Tema escuro</string>
+</resources>

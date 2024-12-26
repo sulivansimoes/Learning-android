@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roudedImageViewRoud">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="searchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:tint">@color/white</item>
+        <item name="searchIcon">@drawable/search_icon</item>
+    </style>
+
+    <style name="posterStyle">
+        <item name="shapeAppearance">@style/ciruclarImagePosterStyle</item>
+    </style>
+
+    <style name="ciruclarImagePosterStyle">
+        <item name="cornerSize">15%</item>
+    </style>
+
+</resources>
