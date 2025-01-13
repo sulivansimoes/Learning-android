@@ -4,10 +4,16 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.sulivan.mvp.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity(), TaskContract.View {
 
     private lateinit var presenter:TaskContract.Presenter
     private lateinit var binding: ActivityMainBinding
+
+    companion object {
+        // Variável estática dentro da classe
+        var contador: Int = 0
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -21,7 +27,7 @@ class MainActivity : AppCompatActivity(), TaskContract.View {
         this.presenter = TaskPresenter(this)
 
         this.binding.addTaskButton.setOnClickListener {
-            val newTask = TaskModel("Nova tarefa","Descricao tarefa", false)
+            val newTask = TaskModel("Nova tarefa ${++contador} ","Descricao tarefa", false)
             this.presenter.addTask(newTask)
         }
     }

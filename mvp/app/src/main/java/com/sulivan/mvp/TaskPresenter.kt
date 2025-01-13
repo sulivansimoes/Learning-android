@@ -24,5 +24,6 @@ class TaskPresenter(
 
     override fun deleteTask(task: TaskModel) {
         this.tasks.remove(task)
+        this.view.showTasks(this.tasks)
     }
 }
